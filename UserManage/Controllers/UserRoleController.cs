@@ -12,7 +12,7 @@ namespace UserManage.Controllers
     [ApiController]
     public class UserRoleController : Controller
     {
-        private IUserRoleService _userRoleService;
+        private readonly IUserRoleService _userRoleService;
         public UserRoleController(IUserRoleService userRoleService)
         {
             _userRoleService = userRoleService;

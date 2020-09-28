@@ -33,7 +33,7 @@ namespace UserManage.Repository
         public virtual void Delete(object id)
         {
             TEntity entityToDelete = dbSet.Find(id);
-            Delete(entityToDelete);
+            dbSet.Remove(entityToDelete);
         }
 
         public virtual void Update(TEntity entityToUpdate)
