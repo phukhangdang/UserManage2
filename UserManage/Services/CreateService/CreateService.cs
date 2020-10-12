@@ -11,8 +11,6 @@ namespace UserManage.Services.CreateService
     public class CreateService : ICreateService
     {
         protected readonly IUnitOfWork _unitOfWork;
-        // protected GenericRepository<User> userRepository { get; }
-        // protected GenericRepository<UserRole> userRoleRepository { get; }
         public CreateService(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;

@@ -20,9 +20,9 @@ namespace Users.Controllers
 
         // GET: api/<UserController>
         [HttpGet]
-        public IEnumerable<User> Get()
+        public IEnumerable<User> Get(int pageNum, int pageSize)
         {
-            return _userService.Gets();
+            return _userService.Gets(pageNum, pageSize);
         }
 
         // GET api/<UserController>/5

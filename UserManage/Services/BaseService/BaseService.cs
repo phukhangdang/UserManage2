@@ -34,9 +34,9 @@ namespace UserManage.Services.BaseService
             return _reponsitory.GetByID(id);
         }
 
-        public virtual IEnumerable<TEntity> Gets()
+        public virtual IEnumerable<TEntity> Gets(int pageNum, int pageSize)
         {
-            return _reponsitory.Get();
+            return _reponsitory.Get(pageNum, pageSize);
         }
 
         public virtual void Update(TEntity entity)

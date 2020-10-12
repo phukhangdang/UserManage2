@@ -20,9 +20,9 @@ namespace UserManage.Controllers
 
         // GET: api/<UserController>
         [HttpGet]
-        public IEnumerable<UserRole> Get()
+        public IEnumerable<UserRole> Get(int pageNum, int pageSize)
         {
-            return _userRoleService.Gets();
+            return _userRoleService.Gets(pageNum, pageSize);
         }
         
         // GET api/<UserController>/5

@@ -8,7 +8,7 @@ namespace UserManage.Services.BaseService
     public interface IBaseService<TEntity>
         where TEntity : class
     {
-        public IEnumerable<TEntity> Gets();
+        public IEnumerable<TEntity> Gets(int pageNum, int pageSize);
         public TEntity GetByID(int id);
         public void Create(TEntity entity);
         public void Update(TEntity entity);

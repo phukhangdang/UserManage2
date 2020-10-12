@@ -16,9 +16,11 @@ namespace UserManage.Repository
             this.dbContext = context;
             this.dbSet = context.Set<TEntity>();
         }
-        public IEnumerable<TEntity> Get()
+        public IEnumerable<TEntity> Get(int pageNum, int pageSize)
         {
-            return dbSet.ToList();
+            var entity = from e in dbSet.Skip(pageNum * pageSize).Take(pageSize)
+                         select e;
+            return entity;
         }
         public virtual TEntity GetByID(object id)
         {
